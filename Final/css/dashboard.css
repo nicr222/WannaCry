@@ -1,0 +1,255 @@
+
+/* Variables */
+:root {
+    --c-dark: #000000;
+    --c-brand: #C62c2c;
+    --c-brand-light: #ed2938;
+    --c-brand-rgb: #FF8C01;
+    --c-body: #333333;
+    --color-info-dark: #7d8da1;
+    --color-info-light: #dce1eb;
+    --font-base: ;
+    --box-shadow: 0px 15px 25px rgba(0,0,0,0.08);
+    --transition: all 0.5s ease;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding: 1.2rem;
+
+    --box-shadow: 0 2rem 3rem (var(--c-body));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 0.88rem;
+    background: var(--c-info-light);
+    user-select: none;
+    overflow-x: hidden;
+}
+
+.container{
+    display: grid;
+    width: 96%;
+    margin:  auto;
+    padding-top: 40px;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto;
+}
+
+a{
+    color: var(--c-dark)
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--color-info-dark)
+}
+
+
+p{
+    color: var(--c-brand);
+}
+
+b {
+    color: var(--c-brand);
+}
+
+.primary{
+    color: var(--c-brand);
+}
+.danger{
+    color: var(--c-brand-light);
+}
+.success{
+    color: var(--c-brand-rgb);
+}
+.warning{
+    color: var(--c-brand-rgb);
+}
+
+
+/* Aside */
+aside {
+    height: auto;
+}
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 6vh;
+    position: relative;
+    top: 3rem;
+}
+
+aside h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    margin: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+}
+
+aside .sidebar a.active {
+    background-color: var(--color-info-dark);
+    color: var(--color-info-dark);
+    margin-left: 0;
+}
+
+aside .sidebar a.active:before{
+    content: '';
+    width: 6px;
+    height: 100%;
+    background: var(--c-brand);
+}
+
+aside .sidebar a.active span {
+    color: var(--c-brand);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover{
+    color: var(--c-brand-rgb);
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+
+}
+
+aside .sidebar .message-count {
+    background: var(--c-brand-light);
+    color: var(--color-info-light);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+/* Main */
+
+main {
+    margin-top: 1.4rem;
+}
+
+main .date {
+    display: inline-block;
+    background: var(--c-brand-light);
+    border-radius: var(--border-radius-1);
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+}
+
+main .date input[type="date"] {
+    background: transparent;
+    color: var(--c-dark);
+}
+
+main .recent-payments {
+    margin-top: 2rem;
+}
+
+main .recent-payments h2 {
+    margin-bottom: 0.8rem;
+}
+
+main .recent-payments table {
+    
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: 100px 100px;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+main .recent-payments table:hover {
+    box-shadow: none;
+}
+
+main table tbody td {
+    height: 2.8rem;
+    border-bottom: 1px solid var(--c-brand-light);
+    color: var(--c-body);
+}
+
+main table tbody tr:last-child td {
+   border: none;
+}
+
+main .recent-payments a {
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--c-dark);
+}
